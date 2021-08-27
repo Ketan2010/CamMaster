@@ -4,4 +4,7 @@
     <color name="purple_700">#471332</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gallery_back">#DAD8D8</color>
+    <color name="purple_hover_share_button">#cb348f</color>
+<!--    <color name="purple_500">#872760</color>-->
 </resources>
