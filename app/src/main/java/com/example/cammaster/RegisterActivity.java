@@ -13,11 +13,7 @@ import android.widget.Toast;
 
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
-
-    TextView createhere, forgetpassword;
-    Button loginButton;
-    EditText inputUsername, inputPassword;
+public class RegisterActivity extends AppCompatActivity {
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -29,34 +25,31 @@ public class LoginActivity extends AppCompatActivity {
                     ".{8,}" +               //at least 8 characters
                     "$");
 
+    TextView loginHere;
+    Button registerButton;
+    private EditText inputUsername, inputPassword, inputConfirmPassword;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        createhere=findViewById(R.id.createHere);
-        createhere.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            }
-        });
-
-        forgetpassword=findViewById(R.id.forgetPassword);
-        forgetpassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, CodeValidationActivity.class));
-            }
-        });
-
-        loginButton=findViewById(R.id.loginButton);
-        inputPassword=findViewById(R.id.inputPassword);
+        setContentView(R.layout.activity_register);
+        loginHere=findViewById(R.id.loginHere);
+        registerButton=findViewById(R.id.loginButton);
         inputUsername=findViewById(R.id.inputUsername);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        inputPassword=findViewById(R.id.inputPassword);
+        inputConfirmPassword=findViewById(R.id.inputConfirmPassword);
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkCredentials();
+            }
+        });
+
+        loginHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
     }
@@ -64,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
     private void checkCredentials() {
         String username=inputUsername.getText().toString();
         String password=inputPassword.getText().toString();
+        String confirmPassword=inputConfirmPassword.getText().toString();
 
         if(username.isEmpty()) {
             showError(inputUsername, "Field can't be empty");
@@ -76,6 +70,12 @@ public class LoginActivity extends AppCompatActivity {
         }
         else if(!PASSWORD_PATTERN.matcher(password).matches()) {
             showError(inputPassword, "Password is too weak");
+        }
+        else if (confirmPassword.isEmpty()){
+            showError(inputConfirmPassword, "Field can't be empty");
+        }
+        else if (!confirmPassword.equals(password)){
+            showError(inputConfirmPassword, "Password does not match");
         }
         else {
             Toast.makeText(this, "Call_Register_Method", Toast.LENGTH_SHORT).show();

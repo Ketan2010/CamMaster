@@ -8,16 +8,11 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
-
-    TextView createhere, forgetpassword;
-    Button loginButton;
-    EditText inputUsername, inputPassword;
+public class CodeValidationActivity extends AppCompatActivity {
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -29,56 +24,40 @@ public class LoginActivity extends AppCompatActivity {
                     ".{8,}" +               //at least 8 characters
                     "$");
 
+    EditText inputUsername;
+    Button verifyButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_code_validation);
 
-        createhere=findViewById(R.id.createHere);
-        createhere.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            }
-        });
-
-        forgetpassword=findViewById(R.id.forgetPassword);
-        forgetpassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, CodeValidationActivity.class));
-            }
-        });
-
-        loginButton=findViewById(R.id.loginButton);
-        inputPassword=findViewById(R.id.inputPassword);
+        verifyButton=findViewById(R.id.loginButton);
         inputUsername=findViewById(R.id.inputUsername);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkCredentials();
+                if(checkCredentials())
+                {
+                    startActivity(new Intent(CodeValidationActivity.this, CodeVerifcationActivity.class));
+                }
             }
         });
     }
 
-    private void checkCredentials() {
+    private boolean checkCredentials() {
         String username=inputUsername.getText().toString();
-        String password=inputPassword.getText().toString();
 
         if(username.isEmpty()) {
             showError(inputUsername, "Field can't be empty");
+            return false;
         }
         else if(!Patterns.EMAIL_ADDRESS.matcher(username).matches()) {
             showError(inputUsername, "Username is not valid");
-        }
-        else if(password.isEmpty()) {
-            showError(inputPassword, "Field can't be empty");
-        }
-        else if(!PASSWORD_PATTERN.matcher(password).matches()) {
-            showError(inputPassword, "Password is too weak");
+            return false;
         }
         else {
-            Toast.makeText(this, "Call_Register_Method", Toast.LENGTH_SHORT).show();
+            return true;
         }
     }
 
