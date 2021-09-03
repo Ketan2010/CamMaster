@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">CamMaster</string>
+    <!--    Added by Luv-->
+    <string name="loading_dots">. . .</string>
+    <string name="login_here">Login Here</string>
+    <string name="register_here">Register Here</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="do_not_have_account">Do not have account?</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_veri_text">We will send you an One Time Password (OTP) on registered E-mail address </string>
+    <string name="otp_validation">OTP Validation</string>
+    <string name="enter_otp_text">Enter one time password send on</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="verify">Verify</string>
+    <string name="_91">+91</string>
+    <string name="xxx">xxxxxxx</string>
 </resources>

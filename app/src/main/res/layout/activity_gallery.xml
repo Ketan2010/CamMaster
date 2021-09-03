@@ -10,7 +10,7 @@
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="90dp"
+        android:columnWidth="100dp"
         android:gravity="center"
 
         android:numColumns="3"
@@ -30,8 +30,6 @@
             android:paddingLeft="170dp"
             android:drawableLeft="@drawable/capture_image_1"
             >
-
-
         </Button>
     </RelativeLayout>
 

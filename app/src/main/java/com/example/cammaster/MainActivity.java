@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // move from onborading activity to login
-                Intent i = new Intent(MainActivity.this, GalleryActivity.class);
+                Intent i = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
