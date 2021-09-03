@@ -4,10 +4,14 @@
 ## Todo's
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
+| Authentication Module UI | Luv | Aug-28 | <li>[x] Done</li> |
+| Gallery View UI | Darshan | Aug-28 | <li>[x] Done</li> |
+| Camera and Editing UI | Ketan | Aug-28 | <li>[x] Done</li> |
+| Integration | Luv, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
+
+## Bug's and changes
+| Match Color | Luv | Sep-3 | <li>[ ] Done</li> |
+| Camera Preview | Ketan | Sep-3 | <li>[ ] Done</li> |
 
 
 ## Contribution Guide
