@@ -10,8 +10,10 @@
 | Integration | Luv, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
 
 ## Bug's and changes
-| Match Color | Luv | Sep-3 | <li>[ ] Done</li> |
-| Camera Preview | Ketan | Sep-3 | <li>[ ] Done</li> |
+| **Bug** | **Assigned to** | **Due** | **Status** |
+| :--- | :--- | :--- | :---: |
+| Match Color | Luv | Sep-5 | <li>[ ] Done</li> |
+| Camera Preview | Ketan | Sep-5 | <li>[ ] Done</li> |
 
 
 ## Contribution Guide
