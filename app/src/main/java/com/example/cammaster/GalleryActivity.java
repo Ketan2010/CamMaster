@@ -1,18 +1,33 @@
 package com.example.cammaster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 public class GalleryActivity extends AppCompatActivity {
 
     GridView gridView;
     DisplayMetrics displayMetrics;
+    Button img_cam;
+
+    private  int REQUEST_CODE_PERMISSION = 101;
+    private  final  String[] REQUIRED_PERMISSIONS = new String[]{
+            "android.permission.CAMERA",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.READ_EXTERNAL_STORAGE"
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +44,22 @@ public class GalleryActivity extends AppCompatActivity {
         screenInches = (double) Math.round(screenInches *10)/10;
         System.out.println("UUUUUereka   "+screenWidth);
 
+        img_cam = (Button) findViewById(R.id.img_cam);
+        if(AllPermissionsGranted())
+        {
+
+        }else{
+            ActivityCompat.requestPermissions(this,REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSION);
+        }
+
+        img_cam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GalleryActivity.this,CameraActivity.class);
+                startActivity(intent);
+            }
+        });
+
         gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(new GalleryAdapter(this));
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,4 +71,15 @@ public class GalleryActivity extends AppCompatActivity {
             }
         });
     }
+
+    private boolean AllPermissionsGranted()
+    {
+        for(String permissions : REQUIRED_PERMISSIONS)
+        {
+            if(ContextCompat.checkSelfPermission(this,permissions)!= PackageManager.PERMISSION_GRANTED){
+                return false;
+            }
+        }
+        return true;
+    };
 }

@@ -45,7 +45,7 @@ public class GalleryAdapter extends BaseAdapter {
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(imageArray[i]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setLayoutParams(new ViewGroup.LayoutParams(240,250));
+        imageView.setLayoutParams(new ViewGroup.LayoutParams(360,250));
         imageView.setAdjustViewBounds(true);
 //        imageView.setMinimumHeight(300);
 //        imageView.setMaxHeight(300);
