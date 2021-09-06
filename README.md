@@ -12,8 +12,8 @@
 ## Bug's and changes
 | **Bug** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Match Color | Luv | Sep-5 | <li>[ ] Done</li> |
-| Camera Preview | Ketan | Sep-5 | <li>[ ] Done</li> |
+| Match Color | Luv | Sep-5 | <li>[x] Done</li> |
+| Camera Preview | Ketan | Sep-5 | <li>[x] Done</li> |
 
 
 ## Contribution Guide
