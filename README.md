@@ -9,8 +9,9 @@
 | Camera and Editing UI | Ketan | Aug-28 | <li>[x] Done</li> |
 | Integration | Luv, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
 | Database integration and authentication | xxx | Oct-10 | <li>[ ] Done</li> |
-| location functionality | xxx | Oct-10 | <li>[ ] Done</li> |
-| image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+| Location functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+| Remote image storage | xxx | Oct-10 | <li>[ ] Done</li> |
+| Image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
 
 ## Bug's and changes
 | **Bug** | **Assigned to** | **Due** | **Status** |
