@@ -4,10 +4,19 @@
 ## Todo's
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
-| AAA | BBB | CCC | <li>[ ] Done</li> |
+| Authentication Module UI | Luv | Aug-28 | <li>[x] Done</li> |
+| Gallery View UI | Darshan | Aug-28 | <li>[x] Done</li> |
+| Camera and Editing UI | Ketan | Aug-28 | <li>[x] Done</li> |
+| Integration | Luv, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
+| Database integration | xxx | Oct-10 | <li>[ ] Done</li> |
+| location functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+| image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+
+## Bug's and changes
+| **Bug** | **Assigned to** | **Due** | **Status** |
+| :--- | :--- | :--- | :---: |
+| Match Color | Luv | Sep-5 | <li>[x] Done</li> |
+| Camera Preview | Ketan | Sep-5 | <li>[x] Done</li> |
 
 
 ## Contribution Guide
