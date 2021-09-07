@@ -31,7 +31,7 @@ public class CodeValidationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code_validation);
-
+        getSupportActionBar().hide();
         verifyButton=findViewById(R.id.loginButton);
         inputUsername=findViewById(R.id.inputUsername);
         verifyButton.setOnClickListener(new View.OnClickListener() {

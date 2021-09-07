@@ -29,7 +29,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/capture_button"
             android:drawableLeft="@drawable/capture_image_1"
-            android:paddingLeft="185dp"></Button>
+            android:paddingLeft="150dp"></Button>
     </RelativeLayout>
 
 

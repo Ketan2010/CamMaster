@@ -23,56 +23,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <Button
         android:id="@+id/btn_share"
         android:layout_width="140dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/share_button"
         android:drawableLeft="@drawable/share"
         android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="Share"
         android:textColor="@color/share_button"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view"
-        app:layout_constraintVertical_bias="1.0" >
-    </Button>
-
-    <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="100dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/share_button"
-        android:drawableLeft="@drawable/ic_edit"
-        android:orientation="horizontal"
-        android:text="edit"
-        android:textColor="@color/share_button"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_share"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintVertical_bias="1.0"></Button>
 
     <Button
         android:id="@+id/btn_details1"
         android:layout_width="140dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -80,6 +54,8 @@
         android:background="@drawable/share_button"
         android:drawableLeft="@drawable/ic_details"
         android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="Details"
         android:textColor="@color/share_button"
         android:textSize="20dp"
