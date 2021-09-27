@@ -1,5 +1,6 @@
 package com.example.cammaster;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -8,17 +9,22 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class GalleryActivity extends AppCompatActivity {
 
     GridView gridView;
     DisplayMetrics displayMetrics;
     Button img_cam;
+    private FirebaseAuth mAuth;
 
     private  int REQUEST_CODE_PERMISSION = 101;
     private  final  String[] REQUIRED_PERMISSIONS = new String[]{
@@ -70,6 +76,23 @@ public class GalleryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.logout, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                mAuth = FirebaseAuth.getInstance();
+                mAuth.signOut();
+                startActivity(new Intent(GalleryActivity.this, LoginActivity.class));
+        }
+        return true;
     }
 
     private boolean AllPermissionsGranted()

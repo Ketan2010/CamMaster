@@ -1,5 +1,6 @@
 package com.example.cammaster;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Pattern;
 
@@ -28,6 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView loginHere;
     Button registerButton;
     private EditText inputUsername, inputPassword, inputConfirmPassword;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +86,25 @@ public class RegisterActivity extends AppCompatActivity {
             showError(inputConfirmPassword, "Password does not match");
         }
         else {
-            Toast.makeText(this, "Call_Register_Method", Toast.LENGTH_SHORT).show();
+            createUser(inputUsername, inputPassword);
         }
     }
 
+    private void createUser(EditText email, EditText password){
+        mAuth = FirebaseAuth.getInstance();
+        mAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                }else{
+                    Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();

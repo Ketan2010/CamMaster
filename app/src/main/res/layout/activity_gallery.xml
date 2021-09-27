@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".GalleryActivity">
 
+
+
     <GridView
         android:id="@+id/grid_view"
         android:layout_width="match_parent"

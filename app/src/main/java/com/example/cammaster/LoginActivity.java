@@ -1,5 +1,6 @@
 package com.example.cammaster;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView createhere, forgetpassword;
     Button loginButton;
     EditText inputUsername, inputPassword;
+    private FirebaseAuth mAuth;
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -79,13 +86,30 @@ public class LoginActivity extends AppCompatActivity {
         }
         else {
 //            Toast.makeText(this, "Call_Register_Method", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(LoginActivity.this, GalleryActivity.class);
-            startActivity(i);
+//            Intent i = new Intent(LoginActivity.this, GalleryActivity.class);
+//            startActivity(i);
+            loginUser(inputUsername, inputPassword);
         }
     }
 
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
+    }
+
+    private void loginUser(EditText email, EditText password){
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginActivity.this, GalleryActivity.class));
+                }else{
+                    Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
