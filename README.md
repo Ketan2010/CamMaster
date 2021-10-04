@@ -12,7 +12,7 @@
 ## Todo's - Review 2
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Database integration and authentication | Lav | Sep-22 | <li>[x] Done</li> |
+| Database integration and authentication, Forgot password | Lav | Sep-22 | <li>[x] Done</li> |
 | Location and image storing | darshan | Sep-27 | <li>[x] Done</li> |
 | Image and details fetching | Ketan | Oct-2 | <li>[x] Done</li> |
 
@@ -20,7 +20,6 @@
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
 | Share button functionality | xxx | Oct-10 | <li>[ ] Done</li> |
-| Forgot password | xxx | Oct-10 | <li>[ ] Done</li> |
 | Image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
 | Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[ ] Done</li> |
 
