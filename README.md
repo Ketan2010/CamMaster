@@ -1,22 +1,32 @@
 # CamMaster
 
 
-## Todo's
+## Todo's - Review 1
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
 | Authentication Module UI | Luv | Aug-28 | <li>[x] Done</li> |
 | Gallery View UI | Darshan | Aug-28 | <li>[x] Done</li> |
 | Camera and Editing UI | Ketan | Aug-28 | <li>[x] Done</li> |
 | Integration | Luv, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
-| Database integration and authentication | xxx | Oct-10 | <li>[ ] Done</li> |
-| Location functionality | xxx | Oct-10 | <li>[ ] Done</li> |
-| Remote image storage | xxx | Oct-10 | <li>[ ] Done</li> |
+
+## Todo's - Review 2
+| **Task** | **Assigned to** | **Due** | **Status** |
+| :--- | :--- | :--- | :---: |
+| Database integration and authentication, Forgot password | Lav | Sep-22 | <li>[x] Done</li> |
+| Location and image storing | darshan | Sep-27 | <li>[x] Done</li> |
+| Image and details fetching | Ketan | Oct-2 | <li>[x] Done</li> |
+
+## Todo's - Post Review 2
+| **Task** | **Assigned to** | **Due** | **Status** |
+| :--- | :--- | :--- | :---: |
+| Share button functionality | xxx | Oct-10 | <li>[ ] Done</li> |
 | Image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+| Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[ ] Done</li> |
 
 ## Bug's and changes
 | **Bug** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Match Color | Luv | Sep-5 | <li>[x] Done</li> |
+| Match UI Color | Luv | Sep-5 | <li>[x] Done</li> |
 | Camera Preview | Ketan | Sep-5 | <li>[x] Done</li> |
 
 
