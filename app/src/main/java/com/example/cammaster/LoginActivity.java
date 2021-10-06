@@ -48,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
-
         forgetpassword=findViewById(R.id.forgetPassword);
         forgetpassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, CodeValidationActivity.class));
             }
         });
-
         loginButton=findViewById(R.id.loginButton);
         inputPassword=findViewById(R.id.inputPassword);
         inputUsername=findViewById(R.id.inputUsername);
@@ -99,13 +97,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginUser(EditText email, EditText password){
         mAuth = FirebaseAuth.getInstance();
-
         mAuth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this, GalleryActivity.class));
+                    Intent intent = new Intent(getApplicationContext(),GalleryActivity.class);
+                    intent.putExtra("month", "0");
+                    intent.putExtra("year", "0");
+                    startActivity(intent);
                 }else{
                     Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }

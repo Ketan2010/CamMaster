@@ -25,7 +25,7 @@ public class ShowPhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_photo);
 
         imageview = (ImageView) findViewById(R.id.imageview);
-        btn_edit = (Button) findViewById(R.id.btn_edit);
+        btn_edit = (Button) findViewById(R.id.filterBtn);
 
         path = getIntent().getExtras().getString("path");
         File imgfile = new File(path);

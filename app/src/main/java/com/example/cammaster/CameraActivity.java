@@ -27,9 +27,9 @@ import android.widget.Toast;
 import java.io.File;
 
 public class CameraActivity extends AppCompatActivity {
-
     TextureView view_finder;
     ImageButton imgCapture;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,13 +44,10 @@ public class CameraActivity extends AppCompatActivity {
     public void startCamera()
     {
         CameraX.unbindAll();
-
         Rational aspectRation = new Rational(view_finder.getWidth(), view_finder.getHeight());
         Size screen = new Size(view_finder.getWidth(), view_finder.getHeight());
-
         PreviewConfig pConfig = new PreviewConfig.Builder().setTargetAspectRatio(aspectRation).setTargetResolution(screen).build();
         Preview preview = new Preview(pConfig);
-
         preview.setOnPreviewOutputUpdateListener(new Preview.OnPreviewOutputUpdateListener() {
             @Override
             public void onUpdated(Preview.PreviewOutput output) {
@@ -62,11 +59,9 @@ public class CameraActivity extends AppCompatActivity {
                 updateTransform();
             }
         });
-
         ImageCaptureConfig imageCaptureConfig = new ImageCaptureConfig.Builder().setCaptureMode(ImageCapture.CaptureMode.MIN_LATENCY)
                 .setTargetRotation(getWindowManager().getDefaultDisplay().getRotation()).build();
         final ImageCapture imageCap = new ImageCapture(imageCaptureConfig);
-
         imgCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +76,6 @@ public class CameraActivity extends AppCompatActivity {
                         intent.putExtra("path", file.getAbsolutePath());
                         startActivity(intent);
                     }
-
                     @Override
                     public void onError(@NonNull ImageCapture.UseCaseError useCaseError, @NonNull String message, @Nullable Throwable cause) {
                         String msg = "Pic captured failed "+message;
@@ -94,7 +88,6 @@ public class CameraActivity extends AppCompatActivity {
                 });
             }
         });
-
         //bind to lifecycle
         CameraX.bindToLifecycle((LifecycleOwner)this, preview, imageCap);
     }
@@ -106,10 +99,8 @@ public class CameraActivity extends AppCompatActivity {
         float h = view_finder.getMeasuredHeight();
         float cx = w/2f;
         float cy = h/2f;
-
         int rotationDgr = 90;
         int rotation = (int)view_finder.getRotation();
-
         switch(rotation)
         {
             case Surface
@@ -132,7 +123,6 @@ public class CameraActivity extends AppCompatActivity {
                 return;
         }
         mx.postRotate((float) rotationDgr, cx, cy);
-
         view_finder.setTransform(mx);
     }
 }

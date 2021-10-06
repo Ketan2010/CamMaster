@@ -1,19 +1,24 @@
 package com.example.cammaster;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.regex.Pattern;
 
 public class CodeValidationActivity extends AppCompatActivity {
-
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     "(?=.*[0-9])" +         //at least 1 digit
@@ -23,7 +28,6 @@ public class CodeValidationActivity extends AppCompatActivity {
                     "(?=\\S+$)" +           //no white spaces
                     ".{8,}" +               //at least 8 characters
                     "$");
-
     EditText inputUsername;
     Button verifyButton;
 
@@ -39,7 +43,19 @@ public class CodeValidationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(checkCredentials())
                 {
-                    startActivity(new Intent(CodeValidationActivity.this, CodeVerifcationActivity.class));
+                    FirebaseAuth.getInstance().sendPasswordResetEmail(inputUsername.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(CodeValidationActivity.this, "Email has been sent successfully ", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(CodeValidationActivity.this, LoginActivity.class));
+                                    }
+                                    else{
+                                        Toast.makeText(CodeValidationActivity.this, "This e-mail is not registered on CamMaster", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
                 }
             }
         });
@@ -47,7 +63,6 @@ public class CodeValidationActivity extends AppCompatActivity {
 
     private boolean checkCredentials() {
         String username=inputUsername.getText().toString();
-
         if(username.isEmpty()) {
             showError(inputUsername, "Field can't be empty");
             return false;

@@ -13,14 +13,42 @@
     <string name="do_not_have_account">Do not have account?</string>
     <string name="already_have_account">Already have account?</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="otp_verification">OTP Verification</string>
-    <string name="otp_veri_text">We will send you an One Time Password (OTP) on registered E-mail address </string>
-    <string name="otp_validation">OTP Validation</string>
+    <string name="Reset_Password">Reset Password</string>
+    <string name="otp_veri_text">We will send you reset password link on registered E-mail address </string>
     <string name="enter_otp_text">Enter one time password send on</string>
     <string name="enter_email_id">Enter Email ID</string>
     <string name="enter_otp">Enter OTP</string>
-    <string name="get_otp">Get OTP</string>
+    <string name="get_otp">Submit</string>
     <string name="verify">Verify</string>
     <string name="_91">+91</string>
     <string name="xxx">xxxxxxx</string>
+    <string name="selectM">Select Month</string>
+    <string name="selectY">Select Year</string>
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+    </string-array>
 </resources>

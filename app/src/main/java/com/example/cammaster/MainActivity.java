@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     // display time of onboarding screen
     private static int TIME_OUT = 3000;
     private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            startActivity(new Intent(MainActivity.this, GalleryActivity.class));
+            Intent intent = new Intent(getApplicationContext(),GalleryActivity.class);
+            intent.putExtra("month", "0");
+            intent.putExtra("year", "0");
+            startActivity(intent);
         }
-
     }
 }

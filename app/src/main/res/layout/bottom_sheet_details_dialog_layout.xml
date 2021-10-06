@@ -42,10 +42,42 @@
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1-7-2021"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/black"
+        android:id="@+id/size_layout"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,73 +104,9 @@
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wadala ,Mumbai"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:textColor="@color/black"
-        android:id="@+id/size_layout"
-        android:background="?android:attr/selectableItemBackground"
-        android:padding="1dp">
-
-        <TextView
-            android:id="@+id/size_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Size"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"
-            android:padding="8dp"
-            android:layout_marginLeft="50dp"/>
-
-        <TextView
-            android:id="@+id/size"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="115 kb"
-            android:textColor="@color/black"
-            android:layout_gravity="center_vertical"
-            android:padding="8dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/dimensions_layout"
-        android:background="?android:attr/selectableItemBackground"
-        android:padding="1dp">
-
-        <TextView
-            android:id="@+id/dimension_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dimensions"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_gravity="center_vertical"
-            android:padding="8dp"
-            android:layout_marginLeft="50dp"/>
-
-        <TextView
-            android:id="@+id/dimensions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="485 x 570"
-            android:textColor="@color/black"
-            android:layout_gravity="center_vertical"
-            android:padding="8dp"/>
-    </LinearLayout>
-
 
 </LinearLayout>
