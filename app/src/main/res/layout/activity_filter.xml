@@ -23,7 +23,9 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <Spinner
+        android:background="@drawable/spinner"
         android:id="@+id/spinnerM"
+        android:paddingLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_margin="80dp"
@@ -35,7 +37,9 @@
         app:layout_constraintVertical_bias="0.38" />
 
     <Spinner
+        android:background="@drawable/spinner"
         android:id="@+id/spinnerY"
+        android:paddingLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_margin="80dp"
@@ -47,6 +51,7 @@
 
     <TextView
         android:id="@+id/textView6"
+        android:textColor="@color/purple_500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="80dp"

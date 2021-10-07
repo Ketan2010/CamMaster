@@ -9,10 +9,13 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.view.View;
@@ -33,8 +36,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -106,13 +113,15 @@ public class ShareActivity extends AppCompatActivity {
         btn_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//WORKING CODE
-                Intent shareIntent = new Intent();
+
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) image_view.getDrawable();
+                Bitmap bitmap = bitmapDrawable.getBitmap();
+                String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(),
+                    bitmap, "Some Title", null);
+                Uri bitmapUri = Uri.parse(bitmapPath);
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("image/*");
-                shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_TEXT, pathD);
+                shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapUri);
                 startActivity(Intent.createChooser(shareIntent,"Share via"));
             }
         });
@@ -136,4 +145,5 @@ public class ShareActivity extends AppCompatActivity {
             }
         });
     }
+
 }
