@@ -21,7 +21,7 @@
 | :--- | :--- | :--- | :---: |
 | Share button functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
 | Image filtering functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
-| Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[ ] Done</li> |
+| Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[x] Done</li> |
 
 ## Bug's and changes
 | **Bug** | **Assigned to** | **Due** | **Status** |
