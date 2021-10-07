@@ -19,14 +19,14 @@
 ## Todo's - Post Review 2
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Share button functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
-| Image filtering functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
-| Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[x] Done</li> |
+| Share button functionality | Lav, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
+| Image filtering functionality | Lav, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
+| Final Testing and documentation | Lav, Darshan, Ketan | Oct-12 | <li>[x] Done</li> |
 
 ## Bug's and changes
 | **Bug** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Match UI Color | Luv | Sep-5 | <li>[x] Done</li> |
+| Match UI Color | Lav | Sep-5 | <li>[x] Done</li> |
 | Camera Preview | Ketan | Sep-5 | <li>[x] Done</li> |
 
 
