@@ -19,8 +19,8 @@
 ## Todo's - Post Review 2
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Share button functionality | xxx | Oct-10 | <li>[ ] Done</li> |
-| Image filtering functionality | xxx | Oct-10 | <li>[ ] Done</li> |
+| Share button functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
+| Image filtering functionality | Luv, Darshan, Ketan | Oct-10 | <li>[x] Done</li> |
 | Final Testing and documentation | Luv, Darshan, Ketan | Oct-12 | <li>[ ] Done</li> |
 
 ## Bug's and changes
