@@ -4,7 +4,7 @@
 ## Todo's - Review 1
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Authentication Module UI | Luv | Aug-28 | <li>[x] Done</li> |
+| Authentication Module UI | Lav | Aug-28 | <li>[x] Done</li> |
 | Gallery View UI | Darshan | Aug-28 | <li>[x] Done</li> |
 | Camera and Editing UI | Ketan | Aug-28 | <li>[x] Done</li> |
 | Integration | Lav, Darshan, Ketan | Sep-3 | <li>[x] Done</li> |
