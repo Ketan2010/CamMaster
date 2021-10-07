@@ -12,9 +12,9 @@
 ## Todo's - Review 2
 | **Task** | **Assigned to** | **Due** | **Status** |
 | :--- | :--- | :--- | :---: |
-| Database integration and authentication, Forgot password | Lav | Sep-22 | <li>[x] Done</li> |
-| Location and image storing | darshan | Sep-27 | <li>[x] Done</li> |
-| Image and details fetching | Ketan | Oct-2 | <li>[x] Done</li> |
+| Database integration and authentication, Forgot password | Lav, Darshan, Ketan | Sep-22 | <li>[x] Done</li> |
+| Location and image storing | Lav, Darshan, Ketan | Sep-27 | <li>[x] Done</li> |
+| Image and details fetching | Lav, Darshan, Ketan | Oct-2 | <li>[x] Done</li> |
 
 ## Todo's - Post Review 2
 | **Task** | **Assigned to** | **Due** | **Status** |
